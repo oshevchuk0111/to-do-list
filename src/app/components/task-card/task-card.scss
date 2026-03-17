@@ -1,0 +1,18 @@
+div {
+  border: 1px solid #4a0774;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+h2 {
+  color: #4a0774;
+}
+
+input {
+  align-self: flex-end;
+  width: 20px;
+  height: 20px;
+  accent-color: #4a0774;
+}
