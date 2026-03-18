@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Task } from '../../models/task.model';
-import { TaskCard } from "../task-card/task-card";
+import { TaskCard } from '../task-card/task-card';
+import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-tasks-list',
@@ -23,4 +24,8 @@ export class TasksList {
       isDone: false,
     },
   ]);
+
+  private localStorageService = inject(LocalStorageService);
+
+  allTasks = this.localStorageService.getTasks();
 }
