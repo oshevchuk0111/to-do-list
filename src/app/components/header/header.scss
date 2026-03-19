@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+h1 {
+  color: #4a0774;
+  font-size: 36px;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  font-size: 17px;
+  cursor: pointer;
+  color: #4a0774;
+  border: 1px solid #4a0774;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+button:hover,
+button:active {
+  background-color: #4a0774;
+  color: #decdf2;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
