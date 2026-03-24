@@ -28,4 +28,5 @@ export class TasksList {
   private localStorageService = inject(LocalStorageService);
 
   allTasks = this.localStorageService.getTasks();
+
 }

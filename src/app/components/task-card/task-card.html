@@ -1,5 +1,8 @@
 <div>
   <h2>{{ task().title }}</h2>
   <p>{{ task().description }}</p>
-  <input type="checkbox">
+  <input type="checkbox"
+  [checked]="task().isDone"
+  (change)="toggleDone()"
+  >
 </div>

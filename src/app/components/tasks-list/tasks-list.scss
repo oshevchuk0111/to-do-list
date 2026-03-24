@@ -1,7 +1,9 @@
 ul {
   list-style: none;
-  margin: 16px;
+  margin: 16px auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  max-width: 600px;
 }

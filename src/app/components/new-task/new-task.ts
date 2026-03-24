@@ -1,7 +1,8 @@
-import { Component, inject, output} from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { Task } from '../../models/task.model';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-task',
@@ -15,9 +16,10 @@ export class NewTask {
   enteredDescription = '';
 
   private localStorageService = inject(LocalStorageService);
+  private router = inject(Router);
 
-  onCancel(): void {
-    this.cancel.emit();
+  onCancel() {
+    this.router.navigate(['/list']);
   }
 
   onCreateTask() {
@@ -29,5 +31,10 @@ export class NewTask {
     };
 
     this.localStorageService.createTask(newTask);
+
+    this.enteredTitle = '';
+    this.enteredDescription = '';
+
+    this.cancel.emit();
   }
 }
